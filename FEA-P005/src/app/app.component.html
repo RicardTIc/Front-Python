@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="mensagem">
+<app-ciclo [mensagem]="getMensagem()"></app-ciclo>
+
+<h1>Lista (DoCheck)</h1>
+<app-lista [items]="getItens()"></app-lista>
+<input type="text" [(ngModel)]="itemDeLista" #elementoInput>
+<button (click)="adicionaItem()">Adicionar item</button>
+<br/>
+<h3>app-after-content-init</h3>
+<app-after-content-init></app-after-content-init>
