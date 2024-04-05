@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AutenticaInterceptor } from './interceptors/autentica.interceptor';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { SuinoFormComponent } from './components/suino-form/suino-form.component';
 import { SuinoComponent } from './components/suino/suino.component';
 import { SuinoEditarComponent } from './components/suino-editar/suino-editar.component';
@@ -20,6 +20,9 @@ import { EditarPesoComponent } from './components/editar-peso/editar-peso.compon
 import { IdadePipe } from './pipes/idade.pipe';
 import { ContatoComponent } from './components/contato/contato.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SessaoComponent } from './components/sessao/sessao.component';
+import { ListaSessaoComponent } from './components/lista-sessao/lista-sessao.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { FooterComponent } from './components/footer/footer.component';
     EditarPesoComponent,
     IdadePipe,
     ContatoComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe,
+    SessaoComponent,
+    ListaSessaoComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,6 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AutenticaInterceptor, multi: true}],
   bootstrap: [AppComponent]

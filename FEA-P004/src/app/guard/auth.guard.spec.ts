@@ -1,30 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivate, Router } from '@angular/router';
-import { AuthGuard } from './auth.guard';
+import { CanActivateFn } from '@angular/router';
 
-class MockRouter {
-  navigate = jasmine.createSpy('navigate');
-}
+import { authGuard } from './auth.guard';
 
-describe('AuthGuard', () => {
-  let guard: CanActivate;
-  let router: Router;
+describe('authGuard', () => {
+  const executeGuard: CanActivateFn = (...guardParameters) => 
+      TestBed.runInInjectionContext(() => authGuard(...guardParameters));
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [
-        AuthGuard,
-        { provide: Router, useClass: MockRouter }
-      ]
-    });
-    guard = TestBed.inject(AuthGuard);
-    router = TestBed.inject(Router);
+    TestBed.configureTestingModule({});
   });
 
   it('should be created', () => {
-    expect(guard).toBeTruthy();
+    expect(executeGuard).toBeTruthy();
   });
-
-  // Adicione mais testes conforme necessário
 });
-
