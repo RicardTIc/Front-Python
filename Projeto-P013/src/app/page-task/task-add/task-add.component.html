@@ -1,0 +1,19 @@
+
+
+  <!-- classe responsavel por adicionar tarefas a lista com o formsGroup -->
+  <div class="addTask">
+
+      <p>STACK TASK</p>
+
+      <form [formGroup]="formTask" (ngSubmit)="registerTask()">
+        <div class="input-group mb-3">
+          <input formControlName="task" type="text" class="form-control" placeholder="Digite a tarefa" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Adicionar</button>
+          </div>
+        </div>
+      </form>
+  </div> 
+
+

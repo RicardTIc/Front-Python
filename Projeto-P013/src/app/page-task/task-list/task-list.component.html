@@ -1,0 +1,29 @@
+<!-- classe responsavel pela lista de tarefas -->
+<div class="listTask">
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tarefa</th>
+        <th scope="col">Data Criação</th>
+        <th scope="col">Opção</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of task.lista; let i = index">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.task}} </td>
+        <td>{{item.date}} </td>
+        <td>
+          <div class="input-group-append">
+            <button (click) = "delete(i)" class="btn btn-outline-secondary" type="submit">Remover</button>
+          </div>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

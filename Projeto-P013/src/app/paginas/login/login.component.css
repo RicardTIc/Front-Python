@@ -1,0 +1,48 @@
+.cont{
+    display: flex;
+    width: 63%;
+    height: 506px;
+    background-color: #212529b0;
+    margin: 144px auto;
+
+}
+
+/* centraliza e estiliza a fonte do nome Chronos */
+div[_ngcontent-c1] p[_ngcontent-c1] {
+    margin: 210px auto;
+    font-family: none;
+    font-size: 337%;
+    color: silver;
+}
+
+/* flex-filho, define tamanho, largura, cor, posição e bordas */
+.user{
+    display: flex;
+    width: 46%;
+    height: 582px;
+    background-color: silver;
+    margin: -6% 1% 1% 5%;
+    border-radius: 10px;
+}
+
+/* deixa a imagem do tamanho ideal dentro do flex-filho user */
+img[_ngcontent-c1] {
+    width: 62%;
+    height: 228px;
+    border-radius: 120px;
+    margin: 17px auto;
+}
+
+/* flex-filho que ajusta a imagem e o forms dentro do flex user */
+ .input{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 89%;
+}
+
+.btn {
+    
+        margin: 1% 1% 1% 1%;
+    
+}

@@ -1,0 +1,31 @@
+/* estiliza a fonte STACK TAKS */
+p{
+    margin: 3% 0% 1% 0%;
+    color: blueviolet;
+    font-size: xx-large;
+}
+
+/* centraliza a classe addTask dentro do flex-child */
+.addTask{
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* muda a cor do input */
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: blueviolet;
+    padding: 25px;
+    background-color: #c0c0c04d;
+}
+
+/* muda a cor do botão do lado do input */
+.input-group>.input-group-append>.btn, .input-group>.input-group-append>.input-group-text, .input-group>.input-group-prepend:first-child>.btn:not(:first-child), .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child), .input-group>.input-group-prepend:not(:first-child)>.btn, .input-group>.input-group-prepend:not(:first-child)>.input-group-text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: blueviolet;
+    background-color: blueviolet;
+    color: white;
+}
+

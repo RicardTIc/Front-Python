@@ -1,0 +1,41 @@
+<div class="flex">
+
+    <div class="cadastro">
+
+        <p>Cadastre-se</p>
+
+        <form [formGroup]="formCadastro" (ngSubmit)="cadastrarUSer()">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Digite seu nome</label>
+                <input formControlName="nome" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome completo">
+            </div>
+
+               <div class="row">
+                    <div class="col">
+                        <label for="rg1">Digite seu RG</label>
+                        <input formControlName="rg" type="text" class="form-control"  id="rg1" placeholder="RG">
+                    </div>
+                    <div class="col">
+                        <label for="cpf1">Digite seu CPF</label>
+                        <input formControlName="cpf" type="text" class="form-control" id="cpf1" placeholder="CPF">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Digite seu email</label>
+                    <input formControlName="login" type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Digite sua senha</label>
+                    <input formControlName="senha" type="password" class="form-control" id="formGroupExampleInput3"
+                        placeholder="Senha">
+                </div>
+
+                <button [disabled]='!isValid' type="submit" class="btn btn-primary mb-2">Cadastrar!</button>
+
+        </form>
+
+    </div>
+</div>
